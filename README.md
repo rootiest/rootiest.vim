@@ -1,12 +1,12 @@
-# kickstart.vim
+# rootiest.vim
 
-![kickstart-vim-screenshot](./kickstart-vim-screenshot.jpg)
+![rootiest-vim-screenshot](./rootiest-vim-screenshot.png)
 
 ### Introduction
 
-Kickstart.vim is a Vimscript version of [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
+rootiest.vim is a fork of kickstart.vim, a Vimscript version of [Kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
 
-> Kickstart.vim is not associated with core maintainers of Kickstart.nvim. *Huge thanks to Kickstart.nvim for helping me with my (Neo)vim journey and inspiring me to create a little project like this.*
+> Kickstart.vim is not associated with core maintainers of Kickstart.nvim. _Huge thanks to Kickstart.nvim for helping me with my (Neo)vim journey and inspiring me to create a little project like this._
 
 ### Installation
 
@@ -21,18 +21,22 @@ This is an easy way to manage your Vimrc with Git as well as other configuration
 
 0. Backup your existing `.vimrc` (e.g., `mv ~/.vimrc ~/.old-vimrc.bak`)
 1. clone the repository in your home directory
-    ```bash
-    # Replace `theopn/kickstart.vim` with `your-username/forked-repository-name` if you made a fork
-    git clone https://github.com/theopn/kickstart.vim.git ~/kickstart.vim
-    ```
+
+   ```bash
+   # Replace `theopn/kickstart.vim` with `your-username/forked-repository-name` if you made a fork
+   git clone https://github.com/theopn/kickstart.vim.git ~/kickstart.vim
+   ```
+
 2. Create a symbolic link between `~/kickstart.vim/.vimrc` and `~/.vimrc`
-    ```bash
-    # Make sure you have backed up existing .vimrc
-    # The force flag (-f) will overwrite the existing file
-    ln -sf ~/kickstart.vim/.vimrc ~/.vimrc
-    ```
+
+   ```bash
+   # Make sure you have backed up existing .vimrc
+   # The force flag (-f) will overwrite the existing file
+   ln -sf ~/kickstart.vim/.vimrc ~/.vimrc
+   ```
+
 3. Now whenever you open `~/.vimrc`, you are opening `~/kickstart.vim/.vimrc`.
-    Since `kickstart.vim` is a Git repository, you can easily manage changes you made to your `.vimrc` across multiple devices.
+   Since `kickstart.vim` is a Git repository, you can easily manage changes you made to your `.vimrc` across multiple devices.
 
 ### Post Installation
 
@@ -50,14 +54,13 @@ kickstart.vim:
 - **enables some settings enabled by default in Neovim (e.g., filetype, syntax, autoindent, etc.)** on the top of kickstart.nvim settings
 - disables `undofile` by default, but the instructions for changing `undodir` and enabling `undofile` are included
 - uses Vimscript alternatives like:
-    - [vim-plug](https://github.com/junegunn/vim-plug)
-    - [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
-    - [fzf](https://github.com/junegunn/fzf) & [fzf.vim](https://github.com/junegunn/fzf.vim)
+  - [vim-plug](https://github.com/junegunn/vim-plug)
+  - [vim-lsp](https://github.com/prabirshrestha/vim-lsp)
+  - [fzf](https://github.com/junegunn/fzf) & [fzf.vim](https://github.com/junegunn/fzf.vim)
 - does not provide an alternative for:
-    - highlight on yank
-    - **nvim-treesitter**
+  - highlight on yank
+  - **nvim-treesitter**
 - omits Lua configuration and comments irrelevant to Vim
 - is overall simpler than Kickstart.nvim
 
 The best way to understand is to read the configuration!
-

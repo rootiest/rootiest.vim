@@ -1,32 +1,23 @@
+" ██████╗  ██████╗  ██████╗ ████████╗██╗███████╗███████╗████████╗
+" ██╔══██╗██╔═══██╗██╔═══██╗╚══██╔══╝██║██╔════╝██╔════╝╚══██╔══╝
+" ██████╔╝██║   ██║██║   ██║   ██║   ██║█████╗  ███████╗   ██║
+" ██╔══██╗██║   ██║██║   ██║   ██║   ██║██╔══╝  ╚════██║   ██║
+" ██║  ██║╚██████╔╝╚██████╔╝   ██║   ██║███████╗███████║   ██║
+" ╚═╝  ╚═╝ ╚═════╝  ╚═════╝    ╚═╝   ╚═╝╚══════╝╚══════╝   ╚═╝
 "
-" =====================================================================
-" ========                                    .-----.          ========
-" ========         .----------------------.   | === |          ========
-" ========         |.-""""""""""""""""""-.|   |-----|          ========
-" ========         ||                    ||   | === |          ========
-" ========         ||   KICKSTART.VIM    ||   |-----|          ========
-" ========         ||                    ||   | === |          ========
-" ========         ||                    ||   |-----|          ========
-" ========         ||:Tutor              ||   |:::::|          ========
-" ========         |'-..................-'|   |____o|          ========
-" ========         `"")----------------(""`   ___________      ========
-" ========        /::::::::::|  |::::::::::\  \ no mouse \     ========
-" ========       /:::========|  |==hjkl==:::\  \ required \    ========
-" ========      '""""""""""""'  '""""""""""""'  '""""""""""'   ========
-" ========                                                     ========
-" =====================================================================
-"
-" Kickstart.vim is a starting point for your Vim configuration,
-" heavily inspired by Kickstart.nvim.
-"
-" If you are using Neovim, you should use Kickstart.nvim instead:
-" https://github.com/nvim-lua/kickstart.nvim
-" (use `gx` keybinding to open the link)
-"
-" If you have any question while reading the .vimrc,
-" you should use Vim's built-in help, triggered by `:help X`.
-" We also provide a keymap "<space>sh" [s]earch [h]elp documentation.
-"
+"                    /VVVVVVVV\++++  /VVVVVVVV\
+"                    \VVVVVVVV/++++++\VVVVVVVV/
+"                     |VVVVVV|++++++++/VVVVV/' 
+"                     |VVVVVV|++++++/VVVVV/'   
+"                    +|VVVVVV|++++/VVVVV/'+    
+"                  +++|VVVVVV|++/VVVVV/'+++++  
+"                +++++|VVVVVV|/VVV___++++++++++
+"                  +++|VVVVVVVVVV/##/ +_+_+_+  
+"                    +|VVVVVVVVV___ +/#_#,#_#,\
+"                     |VVVVVVV//##/+/#/+/#/'/#/
+"                     |VVVVV/'+/#/+/#/+/#/ /#/ 
+"                     |VVV/'++/#/+/#/ /#/ /#/  
+"                     'V/'  /##//##//##//###/  
 
 
 " Set <space> as the leader key
@@ -59,7 +50,7 @@ set switchbuf=uselast wildmenu "wildoptions=pum,tagfile
 set number
 " You can also add relative line numbers, to help with jumping.
 "  Experiment for yourself to see if you like it!
-"set relativenumber
+set relativenumber
 
 " Enable mouse mode, can be useful for resizing splits for example!
 set mouse=a
@@ -87,8 +78,8 @@ set breakindent
 "
 "  NOTE: See `:help undofile` and `:help undodir` for more information
 "    You may change the undodir to another directory you prefer
-"set undodir=~/.local/state/vim/undo//
-"set undofile
+set undodir=~/.local/state/vim/undo//
+" set undofile
 
 " Case-insensitive searching UNLESS \C or capital in search
 set ignorecase
@@ -198,7 +189,7 @@ Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
 
 " Colorscheme
-Plug 'ghifarit53/tokyonight-vim'
+Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
@@ -208,10 +199,8 @@ call plug#end()
 " [[ Configure plugins ]]
 " Set colorscheme
 set termguicolors
-let g:tokyonight_style = 'night'  " available: night, storm
-let g:tokyonight_enable_italic = 0
-colorscheme tokyonight
-
+let g:airline_theme = 'catppuccin_mocha'
+colorscheme catppuccin_mocha
 
 " [[ Configure vim-which-key ]]
 call which_key#register('<Space>', "g:which_key_map")
