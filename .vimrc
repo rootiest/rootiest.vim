@@ -193,6 +193,32 @@ Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
 " Set airline as statusline
 Plug 'vim-airline/vim-airline'
+
+" Vim-Footprints
+Plug 'axlebedev/footprints'
+
+" Vim-SmoothScroll
+Plug 'terryma/vim-smooth-scroll'
+
+" Vim-Fugitive
+Plug 'tpope/vim-fugitive'
+
+" Unimpaied
+Plug 'tpope/vim-unimpaired'
+
+" Repeat
+Plug 'tpope/vim-repeat'
+
+" Vinegar
+Plug 'tpope/vim-vinegar'
+
+" Surround
+Plug 'tpope/vim-surround'
+
+" Vim-sneak
+Plug 'justinmk/vim-sneak'
+
+
 call plug#end()
 
 
@@ -306,6 +332,29 @@ inoremap <expr> <CR>    pumvisible() ? asyncomplete#close_popup() : "\<CR>""
 
 let g:asyncomplete_auto_completeopt = 0
 set completeopt=menuone,noinsert,noselect,preview
+
+" [[ Configure Vim-Footprints ]]
+let g:footprintsColor = '#251519'
+let g:footprintsTermColor = '208'
+let g:footprintsEasingFunction = 'linear'
+let g:footprintsHistoryDepth = 20
+let g:footprintsExcludeFiletypes = ['magit', 'nerdtree', 'diff']
+let g:footprintsEnabledByDefault = 1
+let g:footprintsOnCurrentLine = 0
+
+" [[ Configure Vim-SmoothScroll ]]
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 0, 2)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 0, 2)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 0, 4)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 0, 4)<CR>
+
+" [[ Configure Rootiest Keymaps ]]
+" Map :Q to save all buffers and quit Vim
+cmap Q wqa
+
+" Map <Leader>Y to copy all contents in the buffer
+nnoremap <Leader>y gg"+yG
+let g:which_key_map.y = 'Cop[y] All'
 
 
 " The line beneath this is called `modeline`. See `:help modeline`
